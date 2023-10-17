@@ -43,6 +43,7 @@ namespace TalkBox
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.hello_Click);
             this.button1.MouseEnter += new System.EventHandler(this.hoverSpeak);
+            this.button1.MouseLeave += new System.EventHandler(this.hoverLeave);
             // 
             // button2
             // 
@@ -54,6 +55,7 @@ namespace TalkBox
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.back_Click);
             this.button2.MouseEnter += new System.EventHandler(this.hoverSpeak);
+            this.button2.MouseLeave += new System.EventHandler(this.hoverLeave);
             // 
             // Phrases
             // 
@@ -63,6 +65,7 @@ namespace TalkBox
             this.Controls.Add(this.button1);
             this.Name = "Phrases";
             this.Size = new System.Drawing.Size(800, 450);
+            this.Load += new System.EventHandler(this.Phrases_Load_1);
             this.ResumeLayout(false);
 
         }

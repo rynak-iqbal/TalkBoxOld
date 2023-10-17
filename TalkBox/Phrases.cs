@@ -35,7 +35,17 @@ namespace TalkBox
             string s = (sender as Button).Text;
             speech.SpeakAsync(s);
         }
+        private void hoverLeave(object sender, EventArgs e)
+        {
+            speech.SpeakAsyncCancelAll();
+        }
+
         private void Phrases_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Phrases_Load_1(object sender, EventArgs e)
         {
 
         }
