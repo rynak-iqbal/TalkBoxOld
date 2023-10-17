@@ -23,6 +23,10 @@ namespace TalkBox
             speech.Volume = 70;
             speech.SpeakAsync(s);
         }
+        private void hoverLeave(object sender, EventArgs e)
+        {
+            speech.SpeakAsyncCancelAll();
+        }
 
         private void phrases_Click(object sender, EventArgs e)
         {
@@ -35,6 +39,8 @@ namespace TalkBox
         {
             phrases1.Visible = false;
             music1.Visible = false;
+            sounds1.Visible = false;
+            audioBooks1.Visible = false;
         }
 
         private void phrases1_Load_1(object sender, EventArgs e)
@@ -51,12 +57,22 @@ namespace TalkBox
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void audioBooks_Click(object sender, EventArgs e)
+        {
+            audioBooks1.Visible = true;
+        }
+
+        private void sounds1_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void soundsButton_Click(object sender, EventArgs e)
+        {
+            sounds1.Visible = true;
+        }
+
+        private void audioBooks1_Load(object sender, EventArgs e)
         {
 
         }

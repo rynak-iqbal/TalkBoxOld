@@ -45,6 +45,7 @@ namespace TalkBox
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.back_Click);
             this.button2.MouseEnter += new System.EventHandler(this.hoverSpeak);
+            this.button2.MouseLeave += new System.EventHandler(this.hoverLeave);
             // 
             // button1
             // 
@@ -56,6 +57,7 @@ namespace TalkBox
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.playMusic);
             this.button1.MouseEnter += new System.EventHandler(this.hoverSpeak);
+            this.button1.MouseLeave += new System.EventHandler(this.hoverLeave);
             // 
             // Stop
             // 
@@ -67,6 +69,7 @@ namespace TalkBox
             this.Stop.UseVisualStyleBackColor = true;
             this.Stop.Click += new System.EventHandler(this.stop_Click);
             this.Stop.MouseEnter += new System.EventHandler(this.hoverSpeak);
+            this.Stop.MouseLeave += new System.EventHandler(this.hoverLeave);
             // 
             // Music
             // 

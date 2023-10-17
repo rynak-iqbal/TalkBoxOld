@@ -51,6 +51,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AudioBooks.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AudioBooks.Designer.cs">
+      <DependentUpon>AudioBooks.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +77,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sounds.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sounds.Designer.cs">
+      <DependentUpon>Sounds.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AudioBooks.resx">
+      <DependentUpon>AudioBooks.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainPage.resx">
       <DependentUpon>MainPage.cs</DependentUpon>
     </EmbeddedResource>
@@ -89,6 +104,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Sounds.resx">
+      <DependentUpon>Sounds.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
