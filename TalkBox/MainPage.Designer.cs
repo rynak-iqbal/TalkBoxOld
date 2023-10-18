@@ -33,17 +33,17 @@ namespace TalkBox
             this.sounds_button = new System.Windows.Forms.Button();
             this.music_button = new System.Windows.Forms.Button();
             this.audiobooks_button = new System.Windows.Forms.Button();
+            this.audioBooks1 = new TalkBox.AudioBooks();
             this.sounds1 = new TalkBox.Sounds();
             this.music1 = new TalkBox.Music();
             this.phrases1 = new TalkBox.Phrases();
-            this.audioBooks1 = new TalkBox.AudioBooks();
             this.SuspendLayout();
             // 
             // phrases_button
             // 
             this.phrases_button.Location = new System.Drawing.Point(0, 0);
             this.phrases_button.Name = "phrases_button";
-            this.phrases_button.Size = new System.Drawing.Size(400, 225);
+            this.phrases_button.Size = new System.Drawing.Size(800, 112);
             this.phrases_button.TabIndex = 0;
             this.phrases_button.Text = "Phrases";
             this.phrases_button.UseVisualStyleBackColor = true;
@@ -55,7 +55,7 @@ namespace TalkBox
             // 
             this.sounds_button.Location = new System.Drawing.Point(0, 225);
             this.sounds_button.Name = "sounds_button";
-            this.sounds_button.Size = new System.Drawing.Size(400, 225);
+            this.sounds_button.Size = new System.Drawing.Size(800, 112);
             this.sounds_button.TabIndex = 2;
             this.sounds_button.Text = "Sounds";
             this.sounds_button.UseVisualStyleBackColor = true;
@@ -65,9 +65,9 @@ namespace TalkBox
             // 
             // music_button
             // 
-            this.music_button.Location = new System.Drawing.Point(400, 0);
+            this.music_button.Location = new System.Drawing.Point(0, 113);
             this.music_button.Name = "music_button";
-            this.music_button.Size = new System.Drawing.Size(400, 225);
+            this.music_button.Size = new System.Drawing.Size(800, 112);
             this.music_button.TabIndex = 3;
             this.music_button.Text = "Music";
             this.music_button.UseVisualStyleBackColor = true;
@@ -77,15 +77,23 @@ namespace TalkBox
             // 
             // audiobooks_button
             // 
-            this.audiobooks_button.Location = new System.Drawing.Point(400, 225);
+            this.audiobooks_button.Location = new System.Drawing.Point(0, 338);
             this.audiobooks_button.Name = "audiobooks_button";
-            this.audiobooks_button.Size = new System.Drawing.Size(400, 225);
+            this.audiobooks_button.Size = new System.Drawing.Size(800, 112);
             this.audiobooks_button.TabIndex = 4;
             this.audiobooks_button.Text = "Audiobooks";
             this.audiobooks_button.UseVisualStyleBackColor = true;
             this.audiobooks_button.Click += new System.EventHandler(this.audioBooks_Click);
             this.audiobooks_button.MouseEnter += new System.EventHandler(this.hoverSpeak);
             this.audiobooks_button.MouseLeave += new System.EventHandler(this.hoverLeave);
+            // 
+            // audioBooks1
+            // 
+            this.audioBooks1.Location = new System.Drawing.Point(0, 0);
+            this.audioBooks1.Name = "audioBooks1";
+            this.audioBooks1.Size = new System.Drawing.Size(800, 450);
+            this.audioBooks1.TabIndex = 7;
+            this.audioBooks1.Load += new System.EventHandler(this.audioBooks1_Load);
             // 
             // sounds1
             // 
@@ -110,14 +118,6 @@ namespace TalkBox
             this.phrases1.Size = new System.Drawing.Size(800, 450);
             this.phrases1.TabIndex = 1;
             this.phrases1.Load += new System.EventHandler(this.phrases1_Load_1);
-            // 
-            // audioBooks1
-            // 
-            this.audioBooks1.Location = new System.Drawing.Point(0, 0);
-            this.audioBooks1.Name = "audioBooks1";
-            this.audioBooks1.Size = new System.Drawing.Size(800, 450);
-            this.audioBooks1.TabIndex = 7;
-            this.audioBooks1.Load += new System.EventHandler(this.audioBooks1_Load);
             // 
             // MainPage
             // 
