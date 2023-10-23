@@ -34,6 +34,7 @@ namespace TalkBox
 
         private void back_Click(object sender, EventArgs e)
         {
+            backClicked = true;
             this.Visible = false;
         }
 
@@ -85,7 +86,23 @@ namespace TalkBox
 
                 this.Controls.Add(btn);
             }
-        
+
+            if (backClicked == true)
+            {
+                //release com objects to fully kill excel process from running in the background
+                Marshal.ReleaseComObject(ws);
+
+                //close and release
+                wb.Close();
+                Marshal.ReleaseComObject(wb);
+
+                //quit and release
+                excel.Quit();
+                Marshal.ReleaseComObject(excel);
+            }
+
+
+
         }
 
         private void Phrases_Load(object sender, EventArgs e)
