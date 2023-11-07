@@ -39,7 +39,7 @@ namespace TalkBox
             // 
             this.button2.Location = new System.Drawing.Point(3, 3);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(109, 41);
+            this.button2.Size = new System.Drawing.Size(89, 41);
             this.button2.TabIndex = 2;
             this.button2.Text = "Back";
             this.button2.UseVisualStyleBackColor = true;
@@ -49,9 +49,9 @@ namespace TalkBox
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(200, 174);
+            this.button1.Location = new System.Drawing.Point(85, 95);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(385, 82);
+            this.button1.Size = new System.Drawing.Size(296, 45);
             this.button1.TabIndex = 3;
             this.button1.Text = "Song";
             this.button1.UseVisualStyleBackColor = true;
@@ -63,7 +63,7 @@ namespace TalkBox
             // 
             this.Stop.Location = new System.Drawing.Point(3, 50);
             this.Stop.Name = "Stop";
-            this.Stop.Size = new System.Drawing.Size(109, 39);
+            this.Stop.Size = new System.Drawing.Size(89, 39);
             this.Stop.TabIndex = 4;
             this.Stop.Text = "Stop";
             this.Stop.UseVisualStyleBackColor = true;
@@ -75,11 +75,12 @@ namespace TalkBox
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.Controls.Add(this.Stop);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button2);
             this.Name = "Music";
-            this.Size = new System.Drawing.Size(800, 450);
+            this.Size = new System.Drawing.Size(464, 280);
             this.Load += new System.EventHandler(this.Music_Load);
             this.ResumeLayout(false);
 

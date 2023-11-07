@@ -39,7 +39,7 @@ namespace TalkBox
             // 
             this.stop.Location = new System.Drawing.Point(3, 52);
             this.stop.Name = "stop";
-            this.stop.Size = new System.Drawing.Size(109, 41);
+            this.stop.Size = new System.Drawing.Size(89, 41);
             this.stop.TabIndex = 8;
             this.stop.Text = "Stop";
             this.stop.UseVisualStyleBackColor = true;
@@ -49,9 +49,9 @@ namespace TalkBox
             // 
             // book
             // 
-            this.book.Location = new System.Drawing.Point(206, 172);
+            this.book.Location = new System.Drawing.Point(91, 99);
             this.book.Name = "book";
-            this.book.Size = new System.Drawing.Size(385, 82);
+            this.book.Size = new System.Drawing.Size(296, 45);
             this.book.TabIndex = 7;
             this.book.Text = "Goldilocks";
             this.book.UseVisualStyleBackColor = true;
@@ -63,7 +63,7 @@ namespace TalkBox
             // 
             this.back.Location = new System.Drawing.Point(3, 5);
             this.back.Name = "back";
-            this.back.Size = new System.Drawing.Size(109, 41);
+            this.back.Size = new System.Drawing.Size(89, 41);
             this.back.TabIndex = 6;
             this.back.Text = "Back";
             this.back.UseVisualStyleBackColor = true;
@@ -79,7 +79,7 @@ namespace TalkBox
             this.Controls.Add(this.book);
             this.Controls.Add(this.back);
             this.Name = "AudioBooks";
-            this.Size = new System.Drawing.Size(800, 450);
+            this.Size = new System.Drawing.Size(464, 280);
             this.ResumeLayout(false);
 
         }
