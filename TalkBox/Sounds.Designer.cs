@@ -39,7 +39,7 @@ namespace TalkBox
             // 
             this.back.Location = new System.Drawing.Point(3, 3);
             this.back.Name = "back";
-            this.back.Size = new System.Drawing.Size(109, 41);
+            this.back.Size = new System.Drawing.Size(89, 41);
             this.back.TabIndex = 2;
             this.back.Text = "Back";
             this.back.UseVisualStyleBackColor = true;
@@ -49,9 +49,9 @@ namespace TalkBox
             // 
             // birds
             // 
-            this.birds.Location = new System.Drawing.Point(207, 170);
+            this.birds.Location = new System.Drawing.Point(87, 97);
             this.birds.Name = "birds";
-            this.birds.Size = new System.Drawing.Size(385, 82);
+            this.birds.Size = new System.Drawing.Size(296, 45);
             this.birds.TabIndex = 4;
             this.birds.Text = "Birds";
             this.birds.UseVisualStyleBackColor = true;
@@ -63,7 +63,7 @@ namespace TalkBox
             // 
             this.stop.Location = new System.Drawing.Point(3, 50);
             this.stop.Name = "stop";
-            this.stop.Size = new System.Drawing.Size(109, 41);
+            this.stop.Size = new System.Drawing.Size(89, 41);
             this.stop.TabIndex = 5;
             this.stop.Text = "Stop";
             this.stop.UseVisualStyleBackColor = true;
@@ -79,7 +79,7 @@ namespace TalkBox
             this.Controls.Add(this.birds);
             this.Controls.Add(this.back);
             this.Name = "Sounds";
-            this.Size = new System.Drawing.Size(800, 450);
+            this.Size = new System.Drawing.Size(464, 280);
             this.Load += new System.EventHandler(this.Sounds_Load);
             this.ResumeLayout(false);
 

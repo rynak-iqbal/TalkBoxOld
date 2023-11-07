@@ -12,18 +12,25 @@ using System.Runtime.InteropServices;
 using Microsoft.Office.Interop.Excel;
 using Button = System.Windows.Forms.Button;
 using System.IO;
+using System.Reflection;
 
 namespace TalkBox
 {
     public partial class Phrases : UserControl
     {
+
         public Phrases()
         {
             InitializeComponent();
-            Load+=readExcel;
+            Load += readExcel;
 
-            this.SetAutoScrollMargin(0, 2000);
+            //this.SetAutoScrollMargin(0, 2000);
 
+
+        }
+        private void backClick(object sender, EventArgs e)
+        {
+            this.Visible = false;
         }
 
         private void clickSpeak(object sender, EventArgs e)
@@ -34,7 +41,7 @@ namespace TalkBox
 
         private void back_Click(object sender, EventArgs e)
         {
-            backClicked = true;
+            //backClicked = true;
             this.Visible = false;
         }
 
@@ -49,68 +56,93 @@ namespace TalkBox
             speech.SpeakAsyncCancelAll();
         }
 
+        private void CatergoryClick(object sender, EventArgs e)
+        {
+            
+            if (sender is Button clickedButton)
+            {
+
+                string category = clickedButton.Name;
+                Console.WriteLine(category);
+                MainPage.OpenPhrasesSub(category, sender, e);
+
+            }
+        }
+
         private void readExcel(object sender, EventArgs e)
         {
             //Create COM Objects. Create a COM object for everything that is referenced
-            string fileName = "Phrases.xlsx";
-            string filePath = Path.Combine(Environment.CurrentDirectory, @"Data\", fileName);
+            //string fileName = "Phrases.xlsx";
+            //string filePath = Path.Combine(Path.CurrentDirectory, @"Data\", fileName);
+            string filePath = @"D:\TalkBox\Phrases.xlsx";
+
             Microsoft.Office.Interop.Excel.Application excel = new Microsoft.Office.Interop.Excel.Application();
             Workbook wb;
             Worksheet ws;
+
+            int tabIndex = 1;
 
             wb = excel.Workbooks.Open(filePath);
 
             ws = wb.Worksheets[1]; // get first index
 
-            Console.WriteLine(Convert.ToString(ws.Cells[2, 1].Value));
+            //Console.WriteLine(Convert.ToString(ws.Cells[2, 1].Value));
 
             int rows = ws.UsedRange.Rows.Count;
-            int btnIntialHeight = -50;
+            int btnIntialHeight = 0;
             Console.WriteLine(rows);
 
             for (int i = 2; i <= rows; i++)
             {
-                Button btn = new System.Windows.Forms.Button();
-                this.SuspendLayout();
-                btnIntialHeight = btnIntialHeight + 100;
+                if (Convert.ToString(ws.Cells[i, 4].Value) != null)
+                {
+                    Console.WriteLine(Convert.ToString(ws.Cells[i, 4].Value));
+                    Button btn = new System.Windows.Forms.Button();
+                    this.SuspendLayout();
+                    btn.Location = new System.Drawing.Point(100, btnIntialHeight);
+                    btn.Name = Convert.ToString(ws.Cells[i, 4].Value);
+                    btn.Size = new System.Drawing.Size(296, 35);
+                    btn.TabIndex = tabIndex;
+                    btn.Text = Convert.ToString(ws.Cells[i, 4].Value);
+                    btn.UseVisualStyleBackColor = true;
+                    btn.Click += (s, EventArgs) => { loadSubMenu(sender, EventArgs, btn.Name);  };
+                    btn.MouseEnter += new System.EventHandler(this.hoverSpeak);
+                    btn.MouseLeave += new System.EventHandler(this.hoverLeave);
 
-                btn.Location = new System.Drawing.Point(200, btnIntialHeight);
-                btn.Name = Convert.ToString(ws.Cells[i, 1].Value);
-                btn.Size = new System.Drawing.Size(385, 82);
-                btn.TabIndex = 0;
-                btn.Text = Convert.ToString(ws.Cells[i, 1].Value);
-                btn.UseVisualStyleBackColor = true;
-                btn.Click += new System.EventHandler(this.clickSpeak);
-                btn.MouseEnter += new System.EventHandler(this.hoverSpeak);
-                btn.MouseLeave += new System.EventHandler(this.hoverLeave);
-
-                this.Controls.Add(btn);
+                    this.Controls.Add(btn);
+                    tabIndex++;
+                    btnIntialHeight = btnIntialHeight + 35;
+                }
             }
-
-            if (backClicked == true)
-            {
-                //release com objects to fully kill excel process from running in the background
-                Marshal.ReleaseComObject(ws);
-
-                //close and release
-                wb.Close();
-                Marshal.ReleaseComObject(wb);
-
-                //quit and release
-                excel.Quit();
-                Marshal.ReleaseComObject(excel);
-            }
-
-
+            //excel.Save();
+            wb.Close(0);
+            excel.Quit();
+            Marshal.ReleaseComObject(excel);
 
         }
+        private void loadSubMenu(object sender, EventArgs e, string category)
+        {
+
+            //phrasesSub1.Visible = true;
+            //phrasesSub1.category = category;
+            Console.WriteLine("Category: " + category);
+        }
+
+
+        
+
 
         private void Phrases_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void Phrases_Load_1(object sender, EventArgs e)
+        {
+            //phrasesSub1.Visible = false;
+        }
+
+        private void phrasesSub1_Load(object sender, EventArgs e)
         {
 
         }

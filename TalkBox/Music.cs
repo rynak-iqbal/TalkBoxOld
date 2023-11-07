@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Reflection;
 
 namespace TalkBox
 {
@@ -31,8 +32,8 @@ namespace TalkBox
 
         private void playMusic(object sender, EventArgs e)
         {
-            string fileName = "once-in-paris.wav";
-            string filePath = Path.Combine(Environment.CurrentDirectory, @"Data\", fileName);
+            //string fileName = "once-in-paris.wav";
+            string filePath = @"D:\TalkBox\once-in-paris.wav";
             player.URL = filePath;
             player.settings.volume = 30;
             player.controls.play();
