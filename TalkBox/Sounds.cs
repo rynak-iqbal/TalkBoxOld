@@ -32,7 +32,7 @@ namespace TalkBox
 
         private void playBirds(object sender, EventArgs e)
         {
-            player.URL = @"D:\TalkBox\birds.mp3";
+            player.URL = @"C:\TalkBox\birds.mp3";
             player.settings.volume = 30;
             player.controls.play();
         }

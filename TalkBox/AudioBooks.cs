@@ -39,7 +39,7 @@ namespace TalkBox
 
         private void book_Click(object sender, EventArgs e)
         {
-            player.URL = @"D:\TalkBox\goldilocks.mp3";
+            player.URL = @"C:\TalkBox\goldilocks.mp3";
             player.settings.volume = 30;
             player.controls.play();
         }

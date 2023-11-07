@@ -49,7 +49,7 @@ namespace TalkBox
 
         private void loadGeneral()
         {
-            string filePath = @"D:\TalkBox\Phrases.xlsx";
+            string filePath = @"C:\TalkBox\Phrases.xlsx";
 
             Microsoft.Office.Interop.Excel.Application excel = new Microsoft.Office.Interop.Excel.Application();
             Workbook wb;

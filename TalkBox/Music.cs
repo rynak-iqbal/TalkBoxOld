@@ -33,7 +33,7 @@ namespace TalkBox
         private void playMusic(object sender, EventArgs e)
         {
             //string fileName = "once-in-paris.wav";
-            string filePath = @"D:\TalkBox\once-in-paris.wav";
+            string filePath = @"C:\TalkBox\once-in-paris.wav";
             player.URL = filePath;
             player.settings.volume = 30;
             player.controls.play();
