@@ -54,7 +54,7 @@ namespace TalkBox
             Workbook wb;
             Worksheet ws;
 
-            int tabIndex = 1;
+            int tabIndex = 40;
 
             wb = excel.Workbooks.Open(filePath);
 
@@ -73,7 +73,7 @@ namespace TalkBox
                     Button btn = new System.Windows.Forms.Button();
                     this.SuspendLayout();
 
-                    btn.Location = new System.Drawing.Point(200, btnHeight);
+                    btn.Location = new System.Drawing.Point(100, btnHeight);
                     btn.Name = Convert.ToString(ws.Cells[i, 1].Value);
                     btn.Size = new System.Drawing.Size(296, 35);
                     btn.TabIndex = tabIndex;

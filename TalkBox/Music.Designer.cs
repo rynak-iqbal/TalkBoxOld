@@ -40,7 +40,7 @@ namespace TalkBox
             this.button2.Location = new System.Drawing.Point(3, 3);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(89, 41);
-            this.button2.TabIndex = 2;
+            this.button2.TabIndex = 0;
             this.button2.Text = "Back";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.back_Click);
@@ -52,7 +52,7 @@ namespace TalkBox
             this.button1.Location = new System.Drawing.Point(85, 95);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(296, 45);
-            this.button1.TabIndex = 3;
+            this.button1.TabIndex = 1;
             this.button1.Text = "Song";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.playMusic);
@@ -64,7 +64,7 @@ namespace TalkBox
             this.Stop.Location = new System.Drawing.Point(3, 50);
             this.Stop.Name = "Stop";
             this.Stop.Size = new System.Drawing.Size(89, 39);
-            this.Stop.TabIndex = 4;
+            this.Stop.TabIndex = 0;
             this.Stop.Text = "Stop";
             this.Stop.UseVisualStyleBackColor = true;
             this.Stop.Click += new System.EventHandler(this.stop_Click);

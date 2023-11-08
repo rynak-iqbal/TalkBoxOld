@@ -49,7 +49,7 @@ namespace TalkBox
             this.back.Location = new System.Drawing.Point(1, 2);
             this.back.Name = "back";
             this.back.Size = new System.Drawing.Size(89, 41);
-            this.back.TabIndex = 0;
+            this.back.TabIndex = 5;
             this.back.Text = "Back";
             this.back.UseVisualStyleBackColor = true;
             this.back.Click += new System.EventHandler(this.backClick);
@@ -61,7 +61,7 @@ namespace TalkBox
             this.General.Location = new System.Drawing.Point(100, 0);
             this.General.Name = "General";
             this.General.Size = new System.Drawing.Size(296, 35);
-            this.General.TabIndex = 1;
+            this.General.TabIndex = 6;
             this.General.Text = "General";
             this.General.UseVisualStyleBackColor = true;
             this.General.Click += new System.EventHandler(this.CatergoryClick);
@@ -73,7 +73,7 @@ namespace TalkBox
             this.Family.Location = new System.Drawing.Point(100, 35);
             this.Family.Name = "Family";
             this.Family.Size = new System.Drawing.Size(296, 35);
-            this.Family.TabIndex = 2;
+            this.Family.TabIndex = 7;
             this.Family.Text = "Family";
             this.Family.UseVisualStyleBackColor = true;
             this.Family.Click += new System.EventHandler(this.CatergoryClick);
@@ -85,7 +85,7 @@ namespace TalkBox
             this.Feelings.Location = new System.Drawing.Point(100, 70);
             this.Feelings.Name = "Feelings";
             this.Feelings.Size = new System.Drawing.Size(296, 35);
-            this.Feelings.TabIndex = 3;
+            this.Feelings.TabIndex = 8;
             this.Feelings.Text = "Feelings";
             this.Feelings.UseVisualStyleBackColor = true;
             this.Feelings.Click += new System.EventHandler(this.CatergoryClick);
@@ -97,7 +97,7 @@ namespace TalkBox
             this.School.Location = new System.Drawing.Point(100, 105);
             this.School.Name = "School";
             this.School.Size = new System.Drawing.Size(296, 35);
-            this.School.TabIndex = 4;
+            this.School.TabIndex = 9;
             this.School.Text = "School";
             this.School.UseVisualStyleBackColor = true;
             this.School.Click += new System.EventHandler(this.CatergoryClick);
@@ -109,7 +109,7 @@ namespace TalkBox
             this.MealTimes.Location = new System.Drawing.Point(100, 140);
             this.MealTimes.Name = "MealTimes";
             this.MealTimes.Size = new System.Drawing.Size(296, 35);
-            this.MealTimes.TabIndex = 5;
+            this.MealTimes.TabIndex = 10;
             this.MealTimes.Text = "Meal Times";
             this.MealTimes.UseVisualStyleBackColor = true;
             this.MealTimes.Click += new System.EventHandler(this.CatergoryClick);
@@ -121,7 +121,7 @@ namespace TalkBox
             this.Outdoors.Location = new System.Drawing.Point(100, 175);
             this.Outdoors.Name = "Outdoors";
             this.Outdoors.Size = new System.Drawing.Size(296, 35);
-            this.Outdoors.TabIndex = 6;
+            this.Outdoors.TabIndex = 11;
             this.Outdoors.Text = "Outdoors";
             this.Outdoors.UseVisualStyleBackColor = true;
             this.Outdoors.Click += new System.EventHandler(this.CatergoryClick);
@@ -133,7 +133,7 @@ namespace TalkBox
             this.Indoors.Location = new System.Drawing.Point(100, 210);
             this.Indoors.Name = "Indoors";
             this.Indoors.Size = new System.Drawing.Size(296, 35);
-            this.Indoors.TabIndex = 7;
+            this.Indoors.TabIndex = 12;
             this.Indoors.Text = "Indoors";
             this.Indoors.UseVisualStyleBackColor = true;
             this.Indoors.Click += new System.EventHandler(this.CatergoryClick);
@@ -145,7 +145,7 @@ namespace TalkBox
             this.Transportation.Location = new System.Drawing.Point(100, 245);
             this.Transportation.Name = "Transportation";
             this.Transportation.Size = new System.Drawing.Size(296, 35);
-            this.Transportation.TabIndex = 8;
+            this.Transportation.TabIndex = 13;
             this.Transportation.Text = "Transportation";
             this.Transportation.UseVisualStyleBackColor = true;
             this.Transportation.Click += new System.EventHandler(this.CatergoryClick);
@@ -154,20 +154,16 @@ namespace TalkBox
             // 
             // categories
             // 
-            this.categories.Location = new System.Drawing.Point(1, 180);
+            this.categories.Location = new System.Drawing.Point(0, 0);
             this.categories.Name = "categories";
-            this.categories.Size = new System.Drawing.Size(53, 100);
+            this.categories.Size = new System.Drawing.Size(200, 100);
             this.categories.TabIndex = 0;
             this.categories.TabStop = false;
-            this.categories.Text = "Categories";
-            this.categories.Visible = false;
             // 
-            // PhrasesMenu
+            // Phrases
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(464, 281);
-            this.Controls.Add(this.categories);
             this.Controls.Add(this.Transportation);
             this.Controls.Add(this.Indoors);
             this.Controls.Add(this.Outdoors);
@@ -177,8 +173,8 @@ namespace TalkBox
             this.Controls.Add(this.Family);
             this.Controls.Add(this.General);
             this.Controls.Add(this.back);
-            this.Name = "PhrasesMenu";
-            this.Text = "Form1";
+            this.Name = "Phrases";
+            this.Size = new System.Drawing.Size(464, 281);
             this.ResumeLayout(false);
 
         }

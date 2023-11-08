@@ -24,6 +24,18 @@ namespace TalkBox
             loadGeneral();
         }
 
+        private Control FindControlByTabIndex(Control container, int tabIndex)
+        {
+            foreach (Control control in container.Controls)
+            {
+                if (control.TabIndex == tabIndex)
+                {
+                    return control;
+                }
+            }
+            return null;
+        }
+
         private void clickSpeak(object sender, EventArgs e)
         {
             string s = (sender as Button).Text;
@@ -49,13 +61,14 @@ namespace TalkBox
 
         private void loadGeneral()
         {
+
             string filePath = @"C:\TalkBox\Phrases.xlsx";
 
             Microsoft.Office.Interop.Excel.Application excel = new Microsoft.Office.Interop.Excel.Application();
             Workbook wb;
             Worksheet ws;
 
-            int tabIndex = 1;
+            int tabIndex = 20;
 
             wb = excel.Workbooks.Open(filePath);
 
@@ -94,7 +107,6 @@ namespace TalkBox
             wb.Close(0);
             excel.Quit();
             Marshal.ReleaseComObject(excel);
-
         }
     }
 }

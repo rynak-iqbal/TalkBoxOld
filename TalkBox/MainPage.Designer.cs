@@ -33,19 +33,19 @@ namespace TalkBox
             this.sounds_button = new System.Windows.Forms.Button();
             this.music_button = new System.Windows.Forms.Button();
             this.audiobooks_button = new System.Windows.Forms.Button();
+            transportationPhrases1 = new TalkBox.TransportationPhrases();
+            schoolPhrases1 = new TalkBox.SchoolPhrases();
+            outdoorsPhrases1 = new TalkBox.OutdoorsPhrases();
+            mealPhrases1 = new TalkBox.MealPhrases();
+            indoorsPhrases1 = new TalkBox.IndoorsPhrases();
+            feelingsPhrases1 = new TalkBox.FeelingsPhrases();
+            familyPhrases1 = new TalkBox.FamilyPhrases();
+            generalPhrases1 = new TalkBox.GeneralPhrases();
             this.phrases2 = new TalkBox.Phrases();
             this.audioBooks1 = new TalkBox.AudioBooks();
             this.sounds1 = new TalkBox.Sounds();
             this.music1 = new TalkBox.Music();
             this.phrases1 = new TalkBox.Phrases();
-            generalPhrases1 = new TalkBox.GeneralPhrases();
-            familyPhrases1 = new TalkBox.FamilyPhrases();
-            feelingsPhrases1 = new TalkBox.FeelingsPhrases();
-            indoorsPhrases1 = new TalkBox.IndoorsPhrases();
-            mealPhrases1 = new TalkBox.MealPhrases();
-            outdoorsPhrases1 = new TalkBox.OutdoorsPhrases();
-            schoolPhrases1 = new TalkBox.SchoolPhrases();
-            transportationPhrases1 = new TalkBox.TransportationPhrases();
             this.SuspendLayout();
             // 
             // phrases_button
@@ -104,6 +104,62 @@ namespace TalkBox
             this.audiobooks_button.MouseEnter += new System.EventHandler(this.hoverSpeak);
             this.audiobooks_button.MouseLeave += new System.EventHandler(this.hoverLeave);
             // 
+            // transportationPhrases1
+            // 
+            transportationPhrases1.Location = new System.Drawing.Point(0, 1);
+            transportationPhrases1.Name = "transportationPhrases1";
+            transportationPhrases1.Size = new System.Drawing.Size(464, 280);
+            transportationPhrases1.TabIndex = 0;
+            // 
+            // schoolPhrases1
+            // 
+            schoolPhrases1.Location = new System.Drawing.Point(0, -1);
+            schoolPhrases1.Name = "schoolPhrases1";
+            schoolPhrases1.Size = new System.Drawing.Size(464, 280);
+            schoolPhrases1.TabIndex = 1;
+            // 
+            // outdoorsPhrases1
+            // 
+            outdoorsPhrases1.Location = new System.Drawing.Point(0, 1);
+            outdoorsPhrases1.Name = "outdoorsPhrases1";
+            outdoorsPhrases1.Size = new System.Drawing.Size(464, 280);
+            outdoorsPhrases1.TabIndex = 2;
+            // 
+            // mealPhrases1
+            // 
+            mealPhrases1.Location = new System.Drawing.Point(0, -1);
+            mealPhrases1.Name = "mealPhrases1";
+            mealPhrases1.Size = new System.Drawing.Size(464, 280);
+            mealPhrases1.TabIndex = 3;
+            // 
+            // indoorsPhrases1
+            // 
+            indoorsPhrases1.Location = new System.Drawing.Point(0, 0);
+            indoorsPhrases1.Name = "indoorsPhrases1";
+            indoorsPhrases1.Size = new System.Drawing.Size(464, 280);
+            indoorsPhrases1.TabIndex = 4;
+            // 
+            // feelingsPhrases1
+            // 
+            feelingsPhrases1.Location = new System.Drawing.Point(0, 1);
+            feelingsPhrases1.Name = "feelingsPhrases1";
+            feelingsPhrases1.Size = new System.Drawing.Size(464, 280);
+            feelingsPhrases1.TabIndex = 5;
+            // 
+            // familyPhrases1
+            // 
+            familyPhrases1.Location = new System.Drawing.Point(0, 1);
+            familyPhrases1.Name = "familyPhrases1";
+            familyPhrases1.Size = new System.Drawing.Size(464, 280);
+            familyPhrases1.TabIndex = 6;
+            // 
+            // generalPhrases1
+            // 
+            generalPhrases1.Location = new System.Drawing.Point(0, 0);
+            generalPhrases1.Name = "generalPhrases1";
+            generalPhrases1.Size = new System.Drawing.Size(464, 281);
+            generalPhrases1.TabIndex = 7;
+            // 
             // phrases2
             // 
             this.phrases2.Location = new System.Drawing.Point(0, -1);
@@ -115,8 +171,8 @@ namespace TalkBox
             // 
             this.audioBooks1.Location = new System.Drawing.Point(0, 0);
             this.audioBooks1.Name = "audioBooks1";
-            this.audioBooks1.Size = new System.Drawing.Size(0, 0);
-            this.audioBooks1.TabIndex = 7;
+            this.audioBooks1.Size = new System.Drawing.Size(464, 280);
+            this.audioBooks1.TabIndex = 9;
             this.audioBooks1.Load += new System.EventHandler(this.audioBooks1_Load);
             // 
             // sounds1
@@ -124,7 +180,7 @@ namespace TalkBox
             this.sounds1.Location = new System.Drawing.Point(0, 0);
             this.sounds1.Name = "sounds1";
             this.sounds1.Size = new System.Drawing.Size(464, 280);
-            this.sounds1.TabIndex = 6;
+            this.sounds1.TabIndex = 10;
             this.sounds1.Load += new System.EventHandler(this.sounds1_Load);
             // 
             // music1
@@ -133,7 +189,7 @@ namespace TalkBox
             this.music1.Location = new System.Drawing.Point(0, 0);
             this.music1.Name = "music1";
             this.music1.Size = new System.Drawing.Size(464, 280);
-            this.music1.TabIndex = 5;
+            this.music1.TabIndex = 11;
             // 
             // phrases1
             // 
@@ -141,62 +197,6 @@ namespace TalkBox
             this.phrases1.Name = "phrases1";
             this.phrases1.Size = new System.Drawing.Size(464, 281);
             this.phrases1.TabIndex = 0;
-            // 
-            // generalPhrases1
-            // 
-            generalPhrases1.Location = new System.Drawing.Point(0, 0);
-            generalPhrases1.Name = "generalPhrases1";
-            generalPhrases1.Size = new System.Drawing.Size(464, 281);
-            generalPhrases1.TabIndex = 9;
-            // 
-            // familyPhrases1
-            // 
-            familyPhrases1.Location = new System.Drawing.Point(0, 1);
-            familyPhrases1.Name = "familyPhrases1";
-            familyPhrases1.Size = new System.Drawing.Size(464, 280);
-            familyPhrases1.TabIndex = 10;
-            // 
-            // feelingsPhrases1
-            // 
-            feelingsPhrases1.Location = new System.Drawing.Point(0, 1);
-            feelingsPhrases1.Name = "feelingsPhrases1";
-            feelingsPhrases1.Size = new System.Drawing.Size(464, 280);
-            feelingsPhrases1.TabIndex = 11;
-            // 
-            // indoorsPhrases1
-            // 
-            indoorsPhrases1.Location = new System.Drawing.Point(0, 0);
-            indoorsPhrases1.Name = "indoorsPhrases1";
-            indoorsPhrases1.Size = new System.Drawing.Size(464, 280);
-            indoorsPhrases1.TabIndex = 12;
-            // 
-            // mealPhrases1
-            // 
-            mealPhrases1.Location = new System.Drawing.Point(0, -1);
-            mealPhrases1.Name = "mealPhrases1";
-            mealPhrases1.Size = new System.Drawing.Size(464, 280);
-            mealPhrases1.TabIndex = 13;
-            // 
-            // outdoorsPhrases1
-            // 
-            outdoorsPhrases1.Location = new System.Drawing.Point(0, 1);
-            outdoorsPhrases1.Name = "outdoorsPhrases1";
-            outdoorsPhrases1.Size = new System.Drawing.Size(464, 280);
-            outdoorsPhrases1.TabIndex = 14;
-            // 
-            // schoolPhrases1
-            // 
-            schoolPhrases1.Location = new System.Drawing.Point(0, -1);
-            schoolPhrases1.Name = "schoolPhrases1";
-            schoolPhrases1.Size = new System.Drawing.Size(464, 280);
-            schoolPhrases1.TabIndex = 15;
-            // 
-            // transportationPhrases1
-            // 
-            transportationPhrases1.Location = new System.Drawing.Point(0, 1);
-            transportationPhrases1.Name = "transportationPhrases1";
-            transportationPhrases1.Size = new System.Drawing.Size(464, 280);
-            transportationPhrases1.TabIndex = 16;
             // 
             // MainPage
             // 
@@ -237,7 +237,7 @@ namespace TalkBox
         private SpeechSynthesizer speech = new SpeechSynthesizer();
         private Sounds sounds1;
         private AudioBooks audioBooks1;
-        private Phrases phrases2;
+        public Phrases phrases2;
         private static FamilyPhrases familyPhrases1;
         private static FeelingsPhrases feelingsPhrases1;
         private static IndoorsPhrases indoorsPhrases1;

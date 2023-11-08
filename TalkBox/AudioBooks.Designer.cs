@@ -40,7 +40,7 @@ namespace TalkBox
             this.stop.Location = new System.Drawing.Point(3, 52);
             this.stop.Name = "stop";
             this.stop.Size = new System.Drawing.Size(89, 41);
-            this.stop.TabIndex = 8;
+            this.stop.TabIndex = 0;
             this.stop.Text = "Stop";
             this.stop.UseVisualStyleBackColor = true;
             this.stop.Click += new System.EventHandler(this.stop_Click);
@@ -52,7 +52,7 @@ namespace TalkBox
             this.book.Location = new System.Drawing.Point(91, 99);
             this.book.Name = "book";
             this.book.Size = new System.Drawing.Size(296, 45);
-            this.book.TabIndex = 7;
+            this.book.TabIndex = 1;
             this.book.Text = "Goldilocks";
             this.book.UseVisualStyleBackColor = true;
             this.book.Click += new System.EventHandler(this.book_Click);
@@ -64,7 +64,7 @@ namespace TalkBox
             this.back.Location = new System.Drawing.Point(3, 5);
             this.back.Name = "back";
             this.back.Size = new System.Drawing.Size(89, 41);
-            this.back.TabIndex = 6;
+            this.back.TabIndex = 0;
             this.back.Text = "Back";
             this.back.UseVisualStyleBackColor = true;
             this.back.Click += new System.EventHandler(this.back_Click);

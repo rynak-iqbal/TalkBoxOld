@@ -55,7 +55,7 @@ namespace TalkBox
             Workbook wb;
             Worksheet ws;
 
-            int tabIndex = 1;
+            int tabIndex = 30;
 
             wb = excel.Workbooks.Open(filePath);
 
