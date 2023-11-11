@@ -30,28 +30,14 @@ namespace TalkBox
         /// </summary>
         private void InitializeComponent()
         {
-            this.back = new System.Windows.Forms.Button();
             this.birds = new System.Windows.Forms.Button();
-            this.stop = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // back
-            // 
-            this.back.Location = new System.Drawing.Point(3, 3);
-            this.back.Name = "back";
-            this.back.Size = new System.Drawing.Size(89, 41);
-            this.back.TabIndex = 0;
-            this.back.Text = "Back";
-            this.back.UseVisualStyleBackColor = true;
-            this.back.Click += new System.EventHandler(this.back_Click);
-            this.back.MouseEnter += new System.EventHandler(this.hoverSpeak);
-            this.back.MouseLeave += new System.EventHandler(this.hoverLeave);
             // 
             // birds
             // 
-            this.birds.Location = new System.Drawing.Point(87, 97);
+            this.birds.Location = new System.Drawing.Point(3, 97);
             this.birds.Name = "birds";
-            this.birds.Size = new System.Drawing.Size(296, 45);
+            this.birds.Size = new System.Drawing.Size(458, 45);
             this.birds.TabIndex = 1;
             this.birds.Text = "Birds";
             this.birds.UseVisualStyleBackColor = true;
@@ -59,25 +45,11 @@ namespace TalkBox
             this.birds.MouseEnter += new System.EventHandler(this.hoverSpeak);
             this.birds.MouseLeave += new System.EventHandler(this.hoverLeave);
             // 
-            // stop
-            // 
-            this.stop.Location = new System.Drawing.Point(3, 50);
-            this.stop.Name = "stop";
-            this.stop.Size = new System.Drawing.Size(89, 41);
-            this.stop.TabIndex = 0;
-            this.stop.Text = "Stop";
-            this.stop.UseVisualStyleBackColor = true;
-            this.stop.Click += new System.EventHandler(this.stop_Click);
-            this.stop.MouseEnter += new System.EventHandler(this.hoverSpeak);
-            this.stop.MouseLeave += new System.EventHandler(this.hoverLeave);
-            // 
             // Sounds
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.stop);
             this.Controls.Add(this.birds);
-            this.Controls.Add(this.back);
             this.Name = "Sounds";
             this.Size = new System.Drawing.Size(464, 280);
             this.Load += new System.EventHandler(this.Sounds_Load);
@@ -86,10 +58,7 @@ namespace TalkBox
         }
 
         #endregion
-
-        private System.Windows.Forms.Button back;
         private System.Windows.Forms.Button birds;
         private SpeechSynthesizer speech = new SpeechSynthesizer();
-        private System.Windows.Forms.Button stop;
     }
 }

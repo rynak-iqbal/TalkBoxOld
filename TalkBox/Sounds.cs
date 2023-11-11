@@ -18,6 +18,16 @@ namespace TalkBox
         {
             InitializeComponent();
         }
+
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == Keys.Left)
+            {
+                back_Click(this, EventArgs.Empty);
+
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
         private void hoverSpeak(object sender, EventArgs e)
         {
             speech.Volume = 70;

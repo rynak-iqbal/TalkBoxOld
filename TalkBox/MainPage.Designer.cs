@@ -33,19 +33,11 @@ namespace TalkBox
             this.sounds_button = new System.Windows.Forms.Button();
             this.music_button = new System.Windows.Forms.Button();
             this.audiobooks_button = new System.Windows.Forms.Button();
-            transportationPhrases1 = new TalkBox.TransportationPhrases();
-            schoolPhrases1 = new TalkBox.SchoolPhrases();
-            outdoorsPhrases1 = new TalkBox.OutdoorsPhrases();
-            mealPhrases1 = new TalkBox.MealPhrases();
-            indoorsPhrases1 = new TalkBox.IndoorsPhrases();
-            feelingsPhrases1 = new TalkBox.FeelingsPhrases();
-            familyPhrases1 = new TalkBox.FamilyPhrases();
-            generalPhrases1 = new TalkBox.GeneralPhrases();
-            this.phrases2 = new TalkBox.Phrases();
+
+            phrases2 = new TalkBox.Phrases();
             this.audioBooks1 = new TalkBox.AudioBooks();
             this.sounds1 = new TalkBox.Sounds();
             this.music1 = new TalkBox.Music();
-            this.phrases1 = new TalkBox.Phrases();
             this.SuspendLayout();
             // 
             // phrases_button
@@ -104,68 +96,12 @@ namespace TalkBox
             this.audiobooks_button.MouseEnter += new System.EventHandler(this.hoverSpeak);
             this.audiobooks_button.MouseLeave += new System.EventHandler(this.hoverLeave);
             // 
-            // transportationPhrases1
-            // 
-            transportationPhrases1.Location = new System.Drawing.Point(0, 1);
-            transportationPhrases1.Name = "transportationPhrases1";
-            transportationPhrases1.Size = new System.Drawing.Size(464, 280);
-            transportationPhrases1.TabIndex = 0;
-            // 
-            // schoolPhrases1
-            // 
-            schoolPhrases1.Location = new System.Drawing.Point(0, -1);
-            schoolPhrases1.Name = "schoolPhrases1";
-            schoolPhrases1.Size = new System.Drawing.Size(464, 280);
-            schoolPhrases1.TabIndex = 1;
-            // 
-            // outdoorsPhrases1
-            // 
-            outdoorsPhrases1.Location = new System.Drawing.Point(0, 1);
-            outdoorsPhrases1.Name = "outdoorsPhrases1";
-            outdoorsPhrases1.Size = new System.Drawing.Size(464, 280);
-            outdoorsPhrases1.TabIndex = 2;
-            // 
-            // mealPhrases1
-            // 
-            mealPhrases1.Location = new System.Drawing.Point(0, -1);
-            mealPhrases1.Name = "mealPhrases1";
-            mealPhrases1.Size = new System.Drawing.Size(464, 280);
-            mealPhrases1.TabIndex = 3;
-            // 
-            // indoorsPhrases1
-            // 
-            indoorsPhrases1.Location = new System.Drawing.Point(0, 0);
-            indoorsPhrases1.Name = "indoorsPhrases1";
-            indoorsPhrases1.Size = new System.Drawing.Size(464, 280);
-            indoorsPhrases1.TabIndex = 4;
-            // 
-            // feelingsPhrases1
-            // 
-            feelingsPhrases1.Location = new System.Drawing.Point(0, 1);
-            feelingsPhrases1.Name = "feelingsPhrases1";
-            feelingsPhrases1.Size = new System.Drawing.Size(464, 280);
-            feelingsPhrases1.TabIndex = 5;
-            // 
-            // familyPhrases1
-            // 
-            familyPhrases1.Location = new System.Drawing.Point(0, 1);
-            familyPhrases1.Name = "familyPhrases1";
-            familyPhrases1.Size = new System.Drawing.Size(464, 280);
-            familyPhrases1.TabIndex = 6;
-            // 
-            // generalPhrases1
-            // 
-            generalPhrases1.Location = new System.Drawing.Point(0, 0);
-            generalPhrases1.Name = "generalPhrases1";
-            generalPhrases1.Size = new System.Drawing.Size(464, 281);
-            generalPhrases1.TabIndex = 7;
-            // 
             // phrases2
             // 
-            this.phrases2.Location = new System.Drawing.Point(0, -1);
-            this.phrases2.Name = "phrases2";
-            this.phrases2.Size = new System.Drawing.Size(464, 281);
-            this.phrases2.TabIndex = 8;
+            phrases2.Location = new System.Drawing.Point(0, -1);
+            phrases2.Name = "phrases2";
+            phrases2.Size = new System.Drawing.Size(464, 281);
+            phrases2.TabIndex = 8;
             // 
             // audioBooks1
             // 
@@ -191,27 +127,12 @@ namespace TalkBox
             this.music1.Size = new System.Drawing.Size(464, 280);
             this.music1.TabIndex = 11;
             // 
-            // phrases1
-            // 
-            this.phrases1.Location = new System.Drawing.Point(0, 0);
-            this.phrases1.Name = "phrases1";
-            this.phrases1.Size = new System.Drawing.Size(464, 281);
-            this.phrases1.TabIndex = 0;
-            // 
             // MainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(464, 281);
-            this.Controls.Add(transportationPhrases1);
-            this.Controls.Add(schoolPhrases1);
-            this.Controls.Add(outdoorsPhrases1);
-            this.Controls.Add(mealPhrases1);
-            this.Controls.Add(indoorsPhrases1);
-            this.Controls.Add(feelingsPhrases1);
-            this.Controls.Add(familyPhrases1);
-            this.Controls.Add(generalPhrases1);
-            this.Controls.Add(this.phrases2);
+            this.Controls.Add(phrases2);
             this.Controls.Add(this.audioBooks1);
             this.Controls.Add(this.audiobooks_button);
             this.Controls.Add(this.music_button);
@@ -219,6 +140,7 @@ namespace TalkBox
             this.Controls.Add(this.sounds_button);
             this.Controls.Add(this.sounds1);
             this.Controls.Add(this.music1);
+            this.KeyPreview = true;
             this.Name = "MainPage";
             this.Text = "Talk Box";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -232,20 +154,11 @@ namespace TalkBox
         private System.Windows.Forms.Button sounds_button;
         private System.Windows.Forms.Button music_button;
         private System.Windows.Forms.Button audiobooks_button;
-        private Phrases phrases1;
         private Music music1;
         private SpeechSynthesizer speech = new SpeechSynthesizer();
         private Sounds sounds1;
         private AudioBooks audioBooks1;
-        public Phrases phrases2;
-        private static FamilyPhrases familyPhrases1;
-        private static FeelingsPhrases feelingsPhrases1;
-        private static IndoorsPhrases indoorsPhrases1;
-        private static MealPhrases mealPhrases1;
-        private static OutdoorsPhrases outdoorsPhrases1;
-        private static SchoolPhrases schoolPhrases1;
-        private static TransportationPhrases transportationPhrases1;
-        private static GeneralPhrases generalPhrases1;
+        public static Phrases phrases2;
     }
 }
 

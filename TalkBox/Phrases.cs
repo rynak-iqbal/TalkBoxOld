@@ -24,13 +24,38 @@ namespace TalkBox
             InitializeComponent();
 
 
-
         }
 
-        private void backClick(object sender, EventArgs e)
+
+
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
-            this.Visible = false;
+            switch (keyData)
+            {
+                case Keys.Left:
+                    this.back_Click(this, EventArgs.Empty);
+                    return true;
+                case Keys.Right:
+                    Console.WriteLine("Select");
+                    Control focusedControl = this.ActiveControl;
+                    (focusedControl as Button).PerformClick();
+                    return true;
+
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
         }
+
+
+
+        // refocus index after returning from sub menu
+        public void refocusIndex()
+        {
+            this.BringToFront();
+            btn1.Select();
+            btn1.Focus();
+
+        }
+
 
         private void clickSpeak(object sender, EventArgs e)
         {
@@ -62,75 +87,12 @@ namespace TalkBox
             if (sender is Button clickedButton)
             {
 
-                string category = clickedButton.Name;
+                string category = clickedButton.Text;
                 Console.WriteLine(category);
-                MainPage.OpenPhrasesSub(category, sender, e);
+                MainPage.OpenPhrasesSub(category, this.ParentForm);
 
             }
-        }
-
-        //private void readExcel(object sender, EventArgs e)
-        //{
-        //    //Create COM Objects. Create a COM object for everything that is referenced
-        //    //string fileName = "Phrases.xlsx";
-        //    //string filePath = Path.Combine(Path.CurrentDirectory, @"Data\", fileName);
-        //    string filePath = @"D:\TalkBox\Phrases.xlsx";
-
-        //    Microsoft.Office.Interop.Excel.Application excel = new Microsoft.Office.Interop.Excel.Application();
-        //    Workbook wb;
-        //    Worksheet ws;
-
-        //    int tabIndex = 1;
-
-        //    wb = excel.Workbooks.Open(filePath);
-
-        //    ws = wb.Worksheets[1]; // get first index
-
-        //    //Console.WriteLine(Convert.ToString(ws.Cells[2, 1].Value));
-
-        //    int rows = ws.UsedRange.Rows.Count;
-        //    int btnIntialHeight = 0;
-        //    Console.WriteLine(rows);
-
-        //    for (int i = 2; i <= rows; i++)
-        //    {
-        //        if (Convert.ToString(ws.Cells[i, 4].Value) != null)
-        //        {
-        //            Console.WriteLine(Convert.ToString(ws.Cells[i, 4].Value));
-        //            Button btn = new System.Windows.Forms.Button();
-        //            this.SuspendLayout();
-        //            btn.Location = new System.Drawing.Point(100, btnIntialHeight);
-        //            btn.Name = Convert.ToString(ws.Cells[i, 4].Value);
-        //            btn.Size = new System.Drawing.Size(296, 35);
-        //            btn.TabIndex = tabIndex;
-        //            btn.Text = Convert.ToString(ws.Cells[i, 4].Value);
-        //            btn.UseVisualStyleBackColor = true;
-        //            btn.Click += (s, EventArgs) => { loadSubMenu(sender, EventArgs, btn.Name);  };
-        //            btn.MouseEnter += new System.EventHandler(this.hoverSpeak);
-        //            btn.MouseLeave += new System.EventHandler(this.hoverLeave);
-
-        //            this.Controls.Add(btn);
-        //            tabIndex++;
-        //            btnIntialHeight = btnIntialHeight + 35;
-        //        }
-        //    }
-        //    //excel.Save();
-        //    wb.Close(0);
-        //    excel.Quit();
-        //    Marshal.ReleaseComObject(excel);
-
-        //}
-        //private void loadSubMenu(object sender, EventArgs e, string category)
-        //{
-
-        //    //phrasesSub1.Visible = true;
-        //    //phrasesSub1.category = category;
-        //    Console.WriteLine("Category: " + category);
-        //}
-
-
-        
-
+        }    
 
         private void Phrases_Load(object sender, EventArgs e)
         {
@@ -143,6 +105,11 @@ namespace TalkBox
         }
 
         private void phrasesSub1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Phrases_Load_2(object sender, EventArgs e)
         {
 
         }

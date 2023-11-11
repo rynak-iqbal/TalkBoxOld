@@ -1,7 +1,7 @@
 ﻿using System.Speech.Synthesis;
 namespace TalkBox
 {
-    partial class GeneralPhrases
+    partial class PhrasesSubMenu
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,33 +29,20 @@ namespace TalkBox
         /// </summary>
         private void InitializeComponent()
         {
-            this.back = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // back
-            // 
-            this.back.Location = new System.Drawing.Point(1, 1);
-            this.back.Name = "back";
-            this.back.Size = new System.Drawing.Size(89, 41);
-            this.back.TabIndex = 2;
-            this.back.Text = "Back";
-            this.back.UseVisualStyleBackColor = true;
-            this.back.Click += new System.EventHandler(this.back_Click);
-            // 
-            // GeneralPhrases
+            // PhrasesSubMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.back);
-            this.Name = "GeneralPhrases";
+            this.AutoScroll = true;
+            this.Name = "PhrasesSubMenu";
             this.Size = new System.Drawing.Size(464, 281);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button back;
         private SpeechSynthesizer speech = new SpeechSynthesizer();
     }
 }

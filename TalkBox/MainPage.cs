@@ -16,7 +16,21 @@ namespace TalkBox
         {
             InitializeComponent();
             this.FormClosed += new FormClosedEventHandler(FormClosed1);
+        }
 
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            switch (keyData)
+            {
+                case Keys.Left:
+                    return true;
+                case Keys.Right:
+                    Console.WriteLine("Select");
+                    Control focusedControl = this.ActiveControl;
+                    (focusedControl as Button).PerformClick();
+                    return true;
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
         }
 
 
@@ -58,21 +72,40 @@ namespace TalkBox
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            phrases1.Visible = false;
             phrases2.Visible = false;
             music1.Visible = false;
             sounds1.Visible = false;
             audioBooks1.Visible = false;
-            generalPhrases1.Visible = false;
-            familyPhrases1.Visible = false;
-            feelingsPhrases1.Visible = false;
-            schoolPhrases1.Visible = false;
-            mealPhrases1.Visible = false;
-            outdoorsPhrases1.Visible = false;
-            indoorsPhrases1.Visible = false;
-            transportationPhrases1.Visible = false;
+        }
 
+        public static void OpenPhrasesSub(string category, Form form)
+        {
+            Console.WriteLine(form);
+            PhrasesSubMenu phrasesSub = new PhrasesSubMenu(category)
+            {
+                Location = new System.Drawing.Point(0, 0)
+            };
 
+            try
+            {
+                form.Controls.Add(phrasesSub);
+                Console.WriteLine(category);
+                phrasesSub.Visible = true;
+                phrasesSub.BringToFront();
+                phrasesSub.Select();
+                foreach (Control control in phrasesSub.Controls)
+                {
+                    if (control.TabIndex == 20)
+                    {
+                        control.Focus();
+                    }
+                }
+                Console.WriteLine("Phrases Sub reached");
+            } catch(Exception e)
+            {
+                Console.WriteLine(e);
+            }
+            
         }
 
         private void phrases1_Load_1(object sender, EventArgs e)
@@ -80,65 +113,7 @@ namespace TalkBox
 
         }
 
-        public static void OpenPhrasesSub(string category, object sender, EventArgs e)
-        {
-
-            Control c = null;
-            switch (category)
-            {
-                case "General":
-                    Console.WriteLine(category);
-                    generalPhrases1.Visible = true;
-                    c = generalPhrases1;
-                    break;
-                case "Family":
-                    Console.WriteLine(category);
-                    familyPhrases1.Visible = true;
-                    c = familyPhrases1;
-                    break;
-                case "Feelings":
-                    Console.WriteLine(category);
-                    feelingsPhrases1.Visible = true;
-                    c = feelingsPhrases1;
-                    break;
-                case "School":
-                    Console.WriteLine(category);
-                    schoolPhrases1.Visible = true;
-                    c = schoolPhrases1;
-                    break;
-                case "Meal Times":
-                    Console.WriteLine(category);
-                    mealPhrases1.Visible = true;
-                    c = mealPhrases1;
-                    break;
-                case "Outdoors":
-                    Console.WriteLine(category);
-                    outdoorsPhrases1.Visible = true;
-                    c = outdoorsPhrases1;
-                    break;
-                case "Indoors":
-                    Console.WriteLine(category);
-                    indoorsPhrases1.Visible = true;
-                    c = indoorsPhrases1;
-                    break;
-                case "Transportation":
-                    Console.WriteLine(category);
-                    transportationPhrases1.Visible = true;
-                    c = transportationPhrases1;
-                    break;
-                default:
-                    break;
-            }
-            c.Select();
-            foreach (Control control in c.Controls)
-            {
-                if (control.TabIndex == 20)
-                {
-                    control.Focus();
-                }
-            }
-        }
-
+        
         private void musicButton_click(object sender, EventArgs e)
         {
             music1.Visible = true;
@@ -151,18 +126,9 @@ namespace TalkBox
                 firstControlWithTabIndex.Focus();
             }
 
-            phrases1.Visible = false;
             phrases2.Visible = false;
             sounds1.Visible = false;
             audioBooks1.Visible = false;
-            generalPhrases1.Visible = false;
-            familyPhrases1.Visible = false;
-            feelingsPhrases1.Visible = false;
-            schoolPhrases1.Visible = false;
-            mealPhrases1.Visible = false;
-            outdoorsPhrases1.Visible = false;
-            indoorsPhrases1.Visible = false;
-            transportationPhrases1.Visible = false;
         }
         private void musicPage_Load_1(object sender, EventArgs e)
         {
@@ -181,18 +147,9 @@ namespace TalkBox
                 firstControlWithTabIndex.Focus();
             }
 
-            phrases1.Visible = false;
             phrases2.Visible = false;
             music1.Visible = false;
             sounds1.Visible = false;
-            generalPhrases1.Visible = false;
-            familyPhrases1.Visible = false;
-            feelingsPhrases1.Visible = false;
-            schoolPhrases1.Visible = false;
-            mealPhrases1.Visible = false;
-            outdoorsPhrases1.Visible = false;
-            indoorsPhrases1.Visible = false;
-            transportationPhrases1.Visible = false;
         }
 
         private void sounds1_Load(object sender, EventArgs e)
@@ -212,18 +169,9 @@ namespace TalkBox
                 firstControlWithTabIndex.Focus();
             }
 
-            phrases1.Visible = false;
             phrases2.Visible = false;
             music1.Visible = false;
             audioBooks1.Visible = false;
-            generalPhrases1.Visible = false;
-            familyPhrases1.Visible = false;
-            feelingsPhrases1.Visible = false;
-            schoolPhrases1.Visible = false;
-            mealPhrases1.Visible = false;
-            outdoorsPhrases1.Visible = false;
-            indoorsPhrases1.Visible = false;
-            transportationPhrases1.Visible = false;
         }
 
         private void audioBooks1_Load(object sender, EventArgs e)

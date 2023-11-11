@@ -32,8 +32,7 @@ namespace TalkBox
         /// </summary>
         private void InitializeComponent()
         {
-            this.back = new System.Windows.Forms.Button();
-            this.General = new System.Windows.Forms.Button();
+            this.btn1 = new System.Windows.Forms.Button();
             this.Family = new System.Windows.Forms.Button();
             this.Feelings = new System.Windows.Forms.Button();
             this.School = new System.Windows.Forms.Button();
@@ -44,35 +43,23 @@ namespace TalkBox
             this.categories = new System.Windows.Forms.GroupBox();
             this.SuspendLayout();
             // 
-            // back
+            // btn1
             // 
-            this.back.Location = new System.Drawing.Point(1, 2);
-            this.back.Name = "back";
-            this.back.Size = new System.Drawing.Size(89, 41);
-            this.back.TabIndex = 5;
-            this.back.Text = "Back";
-            this.back.UseVisualStyleBackColor = true;
-            this.back.Click += new System.EventHandler(this.backClick);
-            this.back.Enter += new System.EventHandler(this.hoverSpeak);
-            this.back.Leave += new System.EventHandler(this.hoverLeave);
-            // 
-            // General
-            // 
-            this.General.Location = new System.Drawing.Point(100, 0);
-            this.General.Name = "General";
-            this.General.Size = new System.Drawing.Size(296, 35);
-            this.General.TabIndex = 6;
-            this.General.Text = "General";
-            this.General.UseVisualStyleBackColor = true;
-            this.General.Click += new System.EventHandler(this.CatergoryClick);
-            this.General.Enter += new System.EventHandler(this.hoverSpeak);
-            this.General.Leave += new System.EventHandler(this.hoverLeave);
+            this.btn1.Location = new System.Drawing.Point(0, 0);
+            this.btn1.Name = "btn1";
+            this.btn1.Size = new System.Drawing.Size(464, 35);
+            this.btn1.TabIndex = 6;
+            this.btn1.Text = "General";
+            this.btn1.UseVisualStyleBackColor = true;
+            this.btn1.Click += new System.EventHandler(this.CatergoryClick);
+            this.btn1.Enter += new System.EventHandler(this.hoverSpeak);
+            this.btn1.Leave += new System.EventHandler(this.hoverLeave);
             // 
             // Family
             // 
-            this.Family.Location = new System.Drawing.Point(100, 35);
+            this.Family.Location = new System.Drawing.Point(0, 35);
             this.Family.Name = "Family";
-            this.Family.Size = new System.Drawing.Size(296, 35);
+            this.Family.Size = new System.Drawing.Size(464, 35);
             this.Family.TabIndex = 7;
             this.Family.Text = "Family";
             this.Family.UseVisualStyleBackColor = true;
@@ -82,9 +69,9 @@ namespace TalkBox
             // 
             // Feelings
             // 
-            this.Feelings.Location = new System.Drawing.Point(100, 70);
+            this.Feelings.Location = new System.Drawing.Point(0, 70);
             this.Feelings.Name = "Feelings";
-            this.Feelings.Size = new System.Drawing.Size(296, 35);
+            this.Feelings.Size = new System.Drawing.Size(464, 35);
             this.Feelings.TabIndex = 8;
             this.Feelings.Text = "Feelings";
             this.Feelings.UseVisualStyleBackColor = true;
@@ -94,9 +81,9 @@ namespace TalkBox
             // 
             // School
             // 
-            this.School.Location = new System.Drawing.Point(100, 105);
+            this.School.Location = new System.Drawing.Point(0, 105);
             this.School.Name = "School";
-            this.School.Size = new System.Drawing.Size(296, 35);
+            this.School.Size = new System.Drawing.Size(464, 35);
             this.School.TabIndex = 9;
             this.School.Text = "School";
             this.School.UseVisualStyleBackColor = true;
@@ -106,9 +93,9 @@ namespace TalkBox
             // 
             // MealTimes
             // 
-            this.MealTimes.Location = new System.Drawing.Point(100, 140);
+            this.MealTimes.Location = new System.Drawing.Point(0, 140);
             this.MealTimes.Name = "MealTimes";
-            this.MealTimes.Size = new System.Drawing.Size(296, 35);
+            this.MealTimes.Size = new System.Drawing.Size(464, 35);
             this.MealTimes.TabIndex = 10;
             this.MealTimes.Text = "Meal Times";
             this.MealTimes.UseVisualStyleBackColor = true;
@@ -118,9 +105,9 @@ namespace TalkBox
             // 
             // Outdoors
             // 
-            this.Outdoors.Location = new System.Drawing.Point(100, 175);
+            this.Outdoors.Location = new System.Drawing.Point(0, 175);
             this.Outdoors.Name = "Outdoors";
-            this.Outdoors.Size = new System.Drawing.Size(296, 35);
+            this.Outdoors.Size = new System.Drawing.Size(464, 35);
             this.Outdoors.TabIndex = 11;
             this.Outdoors.Text = "Outdoors";
             this.Outdoors.UseVisualStyleBackColor = true;
@@ -130,9 +117,9 @@ namespace TalkBox
             // 
             // Indoors
             // 
-            this.Indoors.Location = new System.Drawing.Point(100, 210);
+            this.Indoors.Location = new System.Drawing.Point(0, 210);
             this.Indoors.Name = "Indoors";
-            this.Indoors.Size = new System.Drawing.Size(296, 35);
+            this.Indoors.Size = new System.Drawing.Size(464, 35);
             this.Indoors.TabIndex = 12;
             this.Indoors.Text = "Indoors";
             this.Indoors.UseVisualStyleBackColor = true;
@@ -142,9 +129,9 @@ namespace TalkBox
             // 
             // Transportation
             // 
-            this.Transportation.Location = new System.Drawing.Point(100, 245);
+            this.Transportation.Location = new System.Drawing.Point(0, 245);
             this.Transportation.Name = "Transportation";
-            this.Transportation.Size = new System.Drawing.Size(296, 35);
+            this.Transportation.Size = new System.Drawing.Size(464, 35);
             this.Transportation.TabIndex = 13;
             this.Transportation.Text = "Transportation";
             this.Transportation.UseVisualStyleBackColor = true;
@@ -171,10 +158,10 @@ namespace TalkBox
             this.Controls.Add(this.School);
             this.Controls.Add(this.Feelings);
             this.Controls.Add(this.Family);
-            this.Controls.Add(this.General);
-            this.Controls.Add(this.back);
+            this.Controls.Add(this.btn1);
             this.Name = "Phrases";
             this.Size = new System.Drawing.Size(464, 281);
+            this.Load += new System.EventHandler(this.Phrases_Load_2);
             this.ResumeLayout(false);
 
         }
@@ -182,7 +169,6 @@ namespace TalkBox
         #endregion
 
         private SpeechSynthesizer speech = new SpeechSynthesizer();
-        private System.Windows.Forms.Button back;
         private Button Transportation;
         private Button Indoors;
         private Button Outdoors;
@@ -190,7 +176,7 @@ namespace TalkBox
         private Button School;
         private Button Feelings;
         private Button Family;
-        private Button General;
+        private Button btn1;
         private GroupBox categories;
     }
 }
