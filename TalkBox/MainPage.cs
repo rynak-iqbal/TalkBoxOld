@@ -51,7 +51,7 @@ namespace TalkBox
 
             phrases2.Visible = true;
             phrases2.Select();
-            Control firstControlWithTabIndex = FindControlByTabIndex(phrases2, 6);
+            Control firstControlWithTabIndex = FindControlByTabIndex(phrases2, 4);
             if (firstControlWithTabIndex != null)
             {
                 firstControlWithTabIndex.Focus();

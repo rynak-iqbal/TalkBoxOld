@@ -186,7 +186,7 @@ namespace TalkBox
                 //add.Focus();
                 //add.Select();
 
-                speech.SpeakAsync("This category is currently empty.");
+                speech.SpeakAsync("This category is currently empty. Please press back.");
             }
 
             //excel.Save();
